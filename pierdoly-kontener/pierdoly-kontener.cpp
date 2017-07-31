@@ -36,13 +36,12 @@ public:
 			++i;
 		}
 	}
-	friend std::ostream& operator<<(std::ostream& out, const kont<typ> a)
+	friend std::ostream& operator<<(std::ostream& out, const kont<typ>& a)
 	{
 		for (int i = 0;i < a.len;++i)
 		{
 			out << a.tab[i] << " ";
 		}
-		out << "\n";
 		return out;
 	}
 	virtual ~kont()
@@ -61,7 +60,7 @@ int main()
 {
 	kont<char> tab;
 	kont<int> tab2{ 2,2,5,2,1,2,5,6 };
-	//std::cout << tab2 << "\n";
+	std::cout << tab2 << "\n";
     return 0;
 }
 
